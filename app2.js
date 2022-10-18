@@ -19,7 +19,7 @@ async function main(){
         await client.connect();
         console.log("connected baby!")
 
-        //databasesList = await client.db().admin().listDatabases();
+        //databasesList = awit client.db().admin().listDatabases();
         
         //console.log("Databases:");
         //databasesList.databases.forEach(db => console.log(` - ${db.name}`));
@@ -28,11 +28,11 @@ async function main(){
         console.log(posts); 
         return posts; 
 
-        return "somehting"; 
+        // return "somehting"; 
     } catch (e) {
         console.error(e);
     } finally {
-        // await client.close();
+        // awit client.close();
     }
 }
 app.get('/', async function (req, res) {
@@ -43,7 +43,7 @@ app.get('/', async function (req, res) {
     // res.send(reslt.name); 
     res.render('index', {
         userName : result.name, 
-        Papacis486 : result
+        // Papacis486 : result didnt work
         //displays info from database do to "username" it will display at the top as the username
     })
 });
@@ -84,7 +84,7 @@ app.post('/deleteinfo/:id', async (req, res) => {
         .catch(error => console.error(error))
     }
     finally{
-        //client.close()
+        //client.close() make sure to comment this out before testing
     }
 })
     
