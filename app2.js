@@ -42,7 +42,7 @@ app.get('/', async function (req, res) {
     //res.send(`results:  ${ result }`);
     // res.send(result.name); 
     res.render('index', {
-        userName : result.class
+        userName : result.name //displays info from database
     })
 });
 
