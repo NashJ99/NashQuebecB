@@ -55,9 +55,12 @@ app.post('/addinfo', async function (req, res) {
         await collection.insertOne(req.body);
         res.redirect('/');
     }
-    catch(e){
-        console.log(error)
-    }
+    // catch(e){
+    //     console.log(error)
+    // }
+    finally{
+        // client.close()
+       }
 
 
     
