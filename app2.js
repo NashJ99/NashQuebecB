@@ -39,8 +39,8 @@ app.get('/', async function (req, res) {
     
     const result = await main().catch(console.error);
     console.log("results: ", result);
-    //res.send(`results:  ${ result }`);
-    // res.send(result.name); 
+    //res.send(`reslts:  ${ reslt }`);
+    // res.send(reslt.name); 
     res.render('index', {
         userName : result.name, 
         Papacis486 : result
