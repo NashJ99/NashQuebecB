@@ -49,9 +49,44 @@ app.get('/', async function (req, res) {
 });
 
 app.post('/addinfo', async function (req, res) {
+    try {
+        client.connect;
+        const collection = client.db("NashPapa").collection("Papacis486");
+        await collection.insertOne(req.body);
+        res.redirect('/');
+    }
+    catch(e){
+        console.log(error)
+    }
+
+
+    
     
    //can you hardcode an database entyr.. 
 });
+app.post('/deleteinfo/:id', async (req, res) => {
+    try {
+        console.log("req.parms.id: ", req.params.id)
+        client.connect; 
+        const collection = client.db("NashPapa").collection("Papacis486");
+        let result = await collection.findOneAndDelete(
+            {
+                "_id": ObjectId(req.params.id)
+            }
+        )
+        .then(result => {
+            console.log(result);
+            res.redirect('/');
+        })
+        .catch(error => console.error(error))
+    }
+    finally{
+        //client.close()
+    }
+})
+    
+
+
 
 
 app.listen(PORT, console.log(`server is running on port: ${PORT}` ));

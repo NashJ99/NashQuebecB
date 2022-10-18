@@ -2,13 +2,13 @@
 
 greeting <%= userName %>
 
-<!-- <% for (var i=0; i<  Papacis486.length; i++ ) { %>
-    <form method="POST" action="/deleteDrink/<%=  Papacis486[i]._id %>" style="display: inline-block">  
+<% for (var i=0; i<  Papacis486.length; i++ ) { %>
+    <form method="POST" action="/deleteinfo/<%=  Papacis486[i]._id %>" style="display: inline-block">  
       <%=  Papacis486[i].name %> (<%=  Papacis486[i].class %>) 
       <input type="submit" value="delete"> 
     </form>
     <br/>
-  <% } %>  -->
+  <% } %> 
 
 
 <form method="POST" action="addinfo">
