@@ -42,7 +42,9 @@ app.get('/', async function (req, res) {
     //res.send(`results:  ${ result }`);
     // res.send(result.name); 
     res.render('index', {
-        userName : result.name //displays info from database
+        userName : result.name, 
+        Papacis486 : result
+        //displays info from database do to "username" it will display at the top as the username
     })
 });
 
