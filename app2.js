@@ -43,7 +43,7 @@ app.get('/', async function (req, res) {
     // res.send(reslt.name); 
     res.render('index', {
         userName : result.name, 
-        // Papacis486 : result didnt work
+        // Papacis486 : result didnt work   
         //displays info from database do to "username" it will display at the top as the username
     })
 });
