@@ -24,7 +24,7 @@ async function main(){
         //console.log("Databases:");
         //databasesList.databases.forEach(db => console.log(` - ${db.name}`));
                 
-        posts = await client.db("NashPapa").collection("Papacis486").findOne();
+        posts = await client.db("NashPapa").collection("Papacis486").find().toArray();
         console.log(posts); 
         return posts; 
 
@@ -35,14 +35,14 @@ async function main(){
         // awit client.close();
     }
 }
-app.get('/', async function (req, res) {
+app.get('/', async  (req, res) => {
     
     const result = await main().catch(console.error);
     console.log("results: ", result);
     //res.send(`reslts:  ${ reslt }`);
     // res.send(reslt.name); 
     res.render('index', {
-        userName : result.name, 
+        topics : result
         // Papacis486 : result didnt work   
         //displays info from database do to "username" it will display at the top as the username
     })
@@ -67,6 +67,7 @@ app.post('/addinfo', async function (req, res) {
     
    //can you hardcode an database entyr.. 
 });
+
 app.post('/deleteinfo/:id', async (req, res) => {
     try {
         console.log("req.parms.id: ", req.params.id)

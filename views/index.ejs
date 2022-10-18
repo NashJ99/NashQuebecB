@@ -1,10 +1,7 @@
-
-
-greeting <%= userName %>
-
-<% for (var i=0; i<  Papacis486.length; i++ ) { %>
-    <form method="POST" action="/deleteinfo/<%=  Papacis486[i]._id %>" style="display: inline-block">  
-      <%=  Papacis486[i].name %> (<%=  Papacis486[i].class %>) 
+<h3>topics</h3>
+<% for (var i=0; i<  topics.length; i++ ) { %>
+    <form method="POST" action="/deleteinfo/<%=topics[i]._id %>" style="display: inline-block">  
+      <%=  topics[i].name %> (<%=  topics[i].class %>) , topics[i].topic
       <input type="submit" value="delete"> 
     </form>
     <br/>
