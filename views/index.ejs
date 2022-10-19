@@ -1,7 +1,7 @@
 <h3>topics</h3>
 <% for (var i=0; i<  topics.length; i++ ) { %>
     <form method="POST" action="/deleteinfo/<%=topics[i]._id %>" style="display: inline-block">  
-      <%=  topics[i].name %> (<%=  topics[i].class %>) , topics[i].topic
+      <%=  topics[i].name %> (<%=  topics[i].class %>)
       <input type="submit" value="delete"> 
     </form>
     <br/>
@@ -13,8 +13,8 @@
     <input type="text" placeholder="class" name="class"><br>
     <label for = "name">name</label>
     <input type="text" placeholder="name" name="name"><br>
-    <label for = "topic">topic</label>
-    <input type="text" placeholder="topic" name="topic"><br>
+    <!-- <label for = "topic">topic</label>
+    <input type="text" placeholder="topic" name="topic"><br> did not show -->
     <input type="submit" value = "add info" />
 </form>
 
