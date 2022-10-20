@@ -89,6 +89,26 @@ app.post('/deleteinfo/:id', async (req, res) => {
         //client.close() make sure to comment this out before testing
     }
 })
+// app.post('/updateid/:id', async (req,res) => {
+//     client.connect;
+//     const collection = client.db("NashPapa").collection("Papacis486");
+//     let result = await collection.findOneAndUpdate(
+//       {
+//         "_id": ObjectId(req.params.id)
+//       },
+//       {
+//         $set: {
+//             class: 'done'
+        
+//         }
+//       }
+//     )
+//     .then(result => {
+//       console.log(result); 
+//       res.redirect('/');
+//     })
+//     .catch(error => console.error(error))
+//   })
     
 
 
